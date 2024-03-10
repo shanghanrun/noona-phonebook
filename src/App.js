@@ -16,13 +16,13 @@ function App() {
       <h1 className="title">연락처</h1>
       <Container>
           <Row>
-			<Col lg={6}>
-				<ContactForm />
-			</Col>
-			<Col lg={6}>
-				<ContactList />
-			</Col>
-		  </Row>
+            <Col lg={6}>
+              <ContactForm />
+            </Col>
+            <Col lg={6}>
+              <ContactList />
+            </Col>
+          </Row>
       </Container>
     </div>
   );

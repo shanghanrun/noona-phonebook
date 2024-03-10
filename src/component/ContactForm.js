@@ -2,6 +2,9 @@ import React from 'react'
 import {Form, Button} from 'react-bootstrap';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux'
+import { v4 as uuidv4 } from 'uuid';
+
+const id = uuidv4();
 
 const ContactForm = () => {
 	const [name, setName] =useState('')
@@ -9,7 +12,7 @@ const ContactForm = () => {
 	const actionSender = useDispatch()
 	const addContact=(e)=>{
 		e.preventDefault()
-		actionSender({type:'add_contact', payload:{name, phoneNumber, keyword:""}})
+		actionSender({type:'add_contact', payload:{id, name, phoneNumber, keyword:""}})
 		setName(''); setPhoneNumber(0)
 	}
   return (
